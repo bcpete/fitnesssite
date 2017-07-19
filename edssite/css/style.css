@@ -115,8 +115,8 @@ li.fb a span:hover {
 }
 .nav:before,
 .nav:after {
-    content: " "; 
-    display: table; 
+    content: " ";
+    display: table;
 }
 .nav:after {
     clear: both;
@@ -217,7 +217,7 @@ li.fb a span:hover {
 /*--slider--*/
 /**** Slider *****/
 .slider{
-	background: url(../images/banner.jpg) no-repeat center top;
+	background: url(../images/homegym3.jpg) no-repeat center top;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -271,7 +271,7 @@ ul.button {
 	padding: 0;
 	width: 100%;
 	margin: 0 auto;
-	
+
 	margin-top: 3em;
 }
 ul.button li {
@@ -639,7 +639,7 @@ ul.list2 p.no span{
 .port-grid-text p{
 	color: #FFF;
 	font-size:em;
-	font-weight:600;	
+	font-weight:600;
 }
 .port-grid-text img{
 	margin-top:5em;
@@ -663,7 +663,7 @@ ul.list2 p.no span{
 .arrow-icon1-r{
 	background: url(../images/arrow-icon1-r.png) no-repeat 0px 0px;
 	left: -20px;
-}	
+}
 .b-animate-go {
 	text-decoration: none;
 }
