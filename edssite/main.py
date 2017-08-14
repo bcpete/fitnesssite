@@ -15,6 +15,7 @@
 # limitations under the License.
 #
 import webapp2, jinja2, os, re
+from google.appengine.api import mail
 
 template_dir = (os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir),
@@ -44,6 +45,19 @@ class MainHandler(Handler):
 class FrontpageHandler(Handler):
     def get(self):
         self.render('index.html')
+
+    def post(self):
+        name   = self.request.get("name")
+        email  = self.request.get("email")
+        number = self.request.get("number")
+        body   = self.request.get("body")
+
+        mail.send_mail(sender = "bradycpeters@gmail.com",
+                        to = "Brady Peters <bradycpeters@gmail.com>",
+                        subject = "business inquiry",
+                        body = "Name: {} \n Email: {} \n Contact number: {} \n Message: {}".format(name,email,number,body))
+
+        self.redirect("/home")
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
