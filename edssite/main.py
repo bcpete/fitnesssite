@@ -52,7 +52,7 @@ class FrontpageHandler(Handler):
         number = self.request.get("number")
         body   = self.request.get("body")
 
-        mail.send_mail(sender = "fitnessstl@gmail.com",
+        mail.send_mail(sender = "bradycpeters@gmail.com",
                         to = "<fitnessstl@gmail.com>",
                         subject = "business inquiry",
                         body = "Name: {} \n Email: {} \n Contact number: {} \n Message: {}".format(name,email,number,body))
